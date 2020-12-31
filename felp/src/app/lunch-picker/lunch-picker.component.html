@@ -1,0 +1,29 @@
+<div class="lunch-picker">
+    <div class="heading">Select characters</div>
+    <div class="input-table">
+        <div class="icon-select">
+            <div class="icon"><img [src]="getPortrait(selectedCharacter1)" /></div>
+            <select class="selection-box" [(ngModel)]="selectedCharacter1" (change)="findLunch()">
+                <option *ngFor="let character of characters" [ngValue]="character">{{ character }}</option>
+            </select>    
+        </div>
+
+        <div class="icon-select">
+            <div class="icon"><img [src]="getPortrait(selectedCharacter2)" /></div>
+            <select class="selection-box" [(ngModel)]="selectedCharacter2" (change)="findLunch()">
+                <option *ngFor="let character of characters" [ngValue]="character">{{ character }}</option>
+            </select>    
+        </div>
+    </div>
+
+    <div class="result-card">
+        <table class="result-table">
+            <tr>
+                <th>Meals Enjoyed Together</th>
+            </tr>
+            <tr *ngFor="let lunch of lunches">
+                <td>{{ lunch.name || "select a character"}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+@focus: #46b4eb;
+@light: #c1e9fc;
+
+
+html, body { height: 100%; font-size: 16px; }
+body { margin: 0; font-family: Comfortaa; background-color: @light; }
+
+.appearance (@value: none) {
+    -webkit-appearance:     @value;
+    -moz-appearance:        @value;
+    -ms-appearance:         @value;
+    -o-appearance:          @value;
+    appearance:             @value;
+}
+
+.no-focusborder {
+    &:focus {
+        outline-style: none;
+    }
+  }
+
+select {
+    .appearance();
+    .no-focusborder();
+}

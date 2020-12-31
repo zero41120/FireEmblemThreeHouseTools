@@ -1,0 +1,80 @@
+@import '../../styles.less';
+
+.lunch-picker {
+    max-width: 600px;
+}
+
+.heading {
+    height: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.input-table {
+    display: grid;
+    grid-auto-rows: auto;
+    gap: 1rem;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.icon-select {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 2px;
+}
+
+@selection-height: 3.5rem;
+
+.icon {
+    touch-action: manipulation;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 2px solid @focus;
+    background-color: white;
+    height: calc(@selection-height - 4px);
+    text-align: center;
+    object-fit: fill;
+    img {
+        height: 100%;
+    }
+}
+
+.selection-box {
+    touch-action: manipulation;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: #46b4eb;
+    border-width: 2px;
+    background-color: white;
+    color: #1691ce;
+    padding: 0 1rem;
+    font-weight: bold;
+    font-family: 'Comfortaa';
+    height: @selection-height;
+    font-size: 1.7rem;
+}
+
+.result-card {
+    background-color: white;
+    border-radius: 5px;
+    width: calc(100% - 2rem);
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.result-table {
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 5px;
+    th {
+        height: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    td {
+        padding: 1rem;
+    }
+}
