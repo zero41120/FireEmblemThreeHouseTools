@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { LunchPickerComponent } from './lunch-picker/lunch-picker.component';
 
 const routes: Routes = [
-  { path: '', component: LunchPickerComponent }
+  { path: '**', redirectTo: '/lunchPicker', pathMatch: 'full' },
+  { path: 'lunchPicker', component: LunchPickerComponent }
 ];
 
 @NgModule({
